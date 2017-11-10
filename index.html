@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trivia Game</title>
+
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--reset.css-->
+    <!--<link rel="stylesheet" href="assets/css/reset.css" type="text/css" />-->
+
+    <!--Style CSS-->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+    <!--header-->
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="jumbotron text-center">
+                <h1>Are you a Friends Fanatic ?</h1>
+                <hr>
+                <button type="button" class="btn-lg btn-success" id="start">Start Quiz !</button>
+                <h3>Time remaining: <span id="timer">60</span> secs.</h3>
+                <div id="score"></div>
+            </div>
+        </div>
+        <!--end of col-->
+    </div>
+    <!--end of header-->
+
+    <br>
+
+    <div class="container">
+
+        <!--First Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionOne" id="first">"On a scale from one to ten, ten being the dumbest a person can look, you are definitely nineteen."</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionOne" id="firstOne" onclick="answerClick(1, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionOne" id="firstTwo" onclick="answerClick(1, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionOne" id="firstThree" onclick="answerClick(1, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionOne" id="firstFour" onclick="answerClick(1, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionOne" id="firstFive" onclick="answerClick(1, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionOne" id="firstSix">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Second Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionTwo" id="second">"They only give you three letters, so after A. S. S. , it is a bit of a challenge."</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTwo" id="secondOne" onclick="answerClick(2, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTwo" id="secondTwo" onclick="answerClick(2, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTwo" id="secondThree" onclick="answerClick(2, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTwo" id="secondFour" onclick="answerClick(2, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTwo" id="secondFive" onclick="answerClick(2, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTwo" id="secondSix" onclick="answerClick(2, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Third Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionThree" id="third">"Turkey's are beautiful, intelligent animals."</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionThree" id="thirdOne" onclick="answerClick(3, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionThree" id="thirdTwo" onclick="answerClick(3, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionThree" id="thirdThree" onclick="answerClick(3, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionThree" id="thirdFour" onclick="answerClick(3, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionThree" id="thirdFive" onclick="answerClick(3, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionThree" id="thirdSix" onclick="answerClick(3, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+
+        <!--Fourh Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionFour" id="fourth">"So in the words of A. A. Milne, "Get out of my chair, dillhole!"</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFour" id="fourthOne" onclick="answerClick(4, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFour" id="fourthTwo" onclick="answerClick(4, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFour" id="fourthThree" onclick="answerClick(4, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFour" id="fourthFour" onclick="answerClick(4, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFour" id="fourthFive" onclick="answerClick(4, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFour" id="fourthSix" onclick="answerClick(4, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Fifth Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionFive" id="fifth">"I've always found public men's rooms to be quite sexy"</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFive" id="fifthOne" onclick="answerClick(5, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFive" id="fifthTwo" onclick="answerClick(5, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFive" id="fifthThree" onclick="answerClick(5, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFive" id="fifthFour" onclick="answerClick(5, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFive" id="fifthFive" onclick="answerClick(5, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionFive" id="fifthSix" onclick="answerClick(5, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Sixth Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionSix" id="sixth">"Chandler entered a Vanilla Ice look-alike contest and won!"</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSix" id="sixthOne" onclick="answerClick(6, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSix" id="sixthTwo" onclick="answerClick(6, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSix" id="sixthThree" onclick="answerClick(6, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSix" id="sixthFour" onclick="answerClick(6, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSix" id="sixthFive" onclick="answerClick(6, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSix" id="sixthSix" onclick="answerClick(6, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Seventh Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionSeven" id="seventh">"Well, this is like summer in a bowl!"</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSeven" id="seventhOne" onclick="answerClick(7, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSeven" id="seventhTwo" onclick="answerClick(7, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSeven" id="seventhThree" onclick="answerClick(7, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSeven" id="seventhFour" onclick="answerClick(7, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSeven" id="seventhFive" onclick="answerClick(7, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionSeven" id="seventhSix" onclick="answerClick(7, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Eighth Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionEight" id="eighth">"I'm in the kitchen... And I'm naked. I'm holdin' an orange... And I'm naked. I'm lightin' the candles... Naked."</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionEight" id="eighthOne" onclick="answerClick(8, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionEight" id="eighthTwo" onclick="answerClick(8, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionEight" id="eighthThree" onclick="answerClick(8, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionEight" id="eighthFour" onclick="answerClick(8, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionEight" id="eighthFive" onclick="answerClick(8, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionEight" id="eighthSix" onclick="answerClick(8, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+
+        <!--Ninth Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionNine" id="ninth">"... Sex. No, food. No, uh... I want both! I want girls on bread!"</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionNine" id="ninthOne" onclick="answerClick(9, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionNine" id="ninthTwo" onclick="answerClick(9, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionNine" id="ninthThree" onclick="answerClick(9, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionNine" id="ninthFour" onclick="answerClick(9, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionNine" id="ninthFive" onclick="answerClick(9, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionNine" id="ninthSix" onclick="answerClick(9, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--Tenth Question-->
+
+        <div class="panel panel-default">
+
+            <!--Question-->
+            <div class="panel-heading text-center">
+                <h2 class="panel-title questionTen" id="tenth">"Where you going in those pants ? 1982 ?"</h2>
+            </div>
+
+            <!--Answer Options-->
+            <div class="panel-body">
+
+                <!--Group buttons-->
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+                    <!--Button One-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTen" id="tenthOne" onclick="answerClick(10, 'Ross')">Ross</button>
+                    </div>
+
+                    <!--Button Two-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTen" id="tenthTwo" onclick="answerClick(10, 'Chandler')">Chandler</button>
+                    </div>
+
+                    <!--Button Three-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTen" id="tenthThree" onclick="answerClick(10, 'Joey')">Joey</button>
+                    </div>
+
+                    <!--Button Four-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTen" id="tenthFour" onclick="answerClick(10, 'Rachel')">Rachel</button>
+                    </div>
+
+                    <!--Button Five-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTen" id="tenthFive" onclick="answerClick(10, 'Phoebe')">Phoebe</button>
+                    </div>
+
+                    <!--Button Six-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default questionTen" id="tenthSix" onclick="answerClick(10, 'Monica')">Monica</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="jumbotron text-center">
+            <button type="button" class="btn-lg btn-success" id="done">Done!</button>
+        </div>
+
+
+    </div>
+    <!--end of container-->
+
+
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+
+</body>
+
+</html>
